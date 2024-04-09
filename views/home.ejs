@@ -1,0 +1,1585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title></title>
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+       <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+       <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/4/4a/Amazon_icon.svg"
+              type="image/x-icon">
+       <style>
+              * {
+                     padding: 0;
+                     margin: 0;
+                     box-sizing: border-box;
+                     font-family: amazon Ember;
+              }
+
+              html,
+              body {
+                     width: 100%;
+                     /* height: 100vh; */
+
+
+              }
+
+              #main {
+                     width: 100vw;
+
+              }
+
+              .navbar {
+                     height: 60px;
+                     background-color: #0f1111;
+                     color: white;
+                     display: flex;
+                     align-items: center;
+                     justify-content: space-evenly;
+
+
+              }
+
+              .nav-address {
+                     padding: 5px;
+              }
+
+              .nav-logo {
+                     height: 50px;
+                     width: 120px;
+
+              }
+
+              .logo img {
+
+                     width: 143px;
+                     height: 50px;
+                     background-size: cover;
+                     background-color: #0F1111;
+
+
+              }
+
+              .border {
+                     border: 1.7px solid transparent;
+              }
+
+              .border:hover {
+
+                     border: 1.7px solid white;
+              }
+
+              .add-first {
+                     color: #cccccc;
+                     font-size: 12px;
+                     margin-left: 19px;
+                     margin-bottom: -4px;
+              }
+
+              .add-icon {
+                     display: flex;
+                     align-items: center;
+              }
+
+              .add-second {
+                     margin-left: 3px;
+                     font-weight: 600;
+                     font-size: 14px;
+              }
+
+
+              .nav-search {
+                     display: flex;
+                     justify-content: space-evenly;
+                     width: 620px;
+                     height: 40px;
+                     border-radius: 4px;
+                     border: none;
+              }
+
+
+              #search-select {
+                     background-color: #f3f3f3;
+                     text-align: center;
+                     width: 130px;
+                     height: 40px;
+                     border-top-left-radius: 4px;
+                     border-bottom-left-radius: 4px;
+                     border: none;
+              }
+
+              .search-input {
+                     width: 100%;
+                     font-size: 1rem;
+                     border: none;
+              }
+
+              .search-icon {
+                     display: flex;
+                     justify-content: center;
+                     align-items: center;
+                     background-color: #F3A847;
+                     height: 40px;
+                     width: 50px;
+                     font-size: 25px;
+                     border-top-right-radius: 4px;
+                     border-bottom-right-radius: 4px;
+
+              }
+
+              .flag-box {
+                     height: 50px;
+                     width: 78px;
+
+                     display: flex;
+                     position: relative;
+                     padding: 5px;
+              }
+
+              .flag-box img {
+                     width: 22px;
+                     height: 14px;
+                     position: absolute;
+                     bottom: 5px;
+              }
+
+              .flag-box h3 {
+                     font-size: 16px;
+                     position: absolute;
+                     bottom: 2.8px;
+                     left: 32px;
+              }
+
+              #select-lang {
+                     width: 18px;
+                     height: 15px;
+                     bottom: 5px;
+                     position: absolute;
+                     left: 52.5px;
+                     color: rgb(222, 221, 221);
+                     background-color: #0f1111;
+                     border: none;
+              }
+
+              .nav-signin {
+                     padding: 5px;
+              }
+
+              span {
+                     font-size: 13px;
+                     color: rgb(210, 209, 209);
+              }
+
+              .nav-second {
+                     font-weight: 600;
+
+              }
+
+              #select-signin {
+                     background-color: #0F1111;
+                     color: rgb(210, 210, 210);
+                     border: none;
+                     margin-left: -4.5px;
+
+              }
+
+              .return-poli {
+                     padding: 5px;
+              }
+
+              .cart-box {
+                     display: flex;
+                     padding: 5px;
+              }
+
+              .cart-box i {
+                     font-size: 40px;
+                     font-weight: 100;
+
+              }
+
+              #text-cart {
+                     padding-top: 21px;
+                     color: rgb(227, 226, 226);
+              }
+
+              .panel-all {
+                     display: flex;
+                     justify-content: space-around;
+                     align-items: center;
+                     background-color: #232F3E;
+                     width: 100vw;
+                     height: 40px;
+                     color: white;
+                     font-weight: 400;
+                     font-size: 14.5px;
+              }
+
+              .second-box:hover {
+                     border: 1.5px solid white;
+
+              }
+
+              .second-box {
+                     padding: 5px;
+              }
+
+
+
+
+              .swiper {
+                     width: 100%;
+                     height: 100%;
+              }
+
+              .swiper-slide {
+                     height: 100vh;
+                     width: 100vw;
+                     text-align: center;
+                     font-size: 18px;
+                     background: #fff;
+                     display: flex;
+                     justify-content: center;
+                     align-items: center;
+
+
+              }
+
+              .swiper-slide img {
+                     display: block;
+                     width: 100%;
+                     height: 100vh;
+                     object-fit: top;
+
+              }
+
+              .swiper-button-next {
+                     top: 17%;
+                     padding: 30px;
+
+              }
+
+              .swiper-button-prev {
+                     top: 17%;
+                     padding: 30px;
+              }
+
+              /* start box position from here    */
+
+              #box-101 {
+                     height: 58.65vh;
+                     width: 23vw;
+                     background-color: #FFFFFF;
+                     position: absolute;
+                     top: 48%;
+                     z-index: 99;
+                     margin-left: 1.5vw;
+
+              }
+
+              #box-102 {
+                     height: 58.65vh;
+                     width: 23vw;
+                     background-color: #FFFFFF;
+                     position: absolute;
+                     top: 48%;
+                     z-index: 99;
+                     margin-left: 26.2vw;
+              }
+
+              #box-103 {
+                     height: 58.65vh;
+                     width: 23vw;
+                     background-color: #FFFFFF;
+                     position: absolute;
+                     top: 48%;
+                     z-index: 99;
+                     margin-left: 50.8vw;
+              }
+
+              #box-104 {
+                     height: 58.65vh;
+                     width: 23vw;
+                     background-color: #FFFFFF;
+                     position: absolute;
+                     top: 48%;
+                     z-index: 99;
+                     margin-left: 75.5vw;
+              }
+
+              #box-101 h2 {
+                     padding-top: 15px;
+                     margin-left: 7px;
+              }
+
+              #inner-box1 {
+                     margin-top: 10px;
+                     margin-left: 13px;
+                     width: 10vw;
+                     height: 22vh;
+
+
+                     overflow: hidden;
+
+              }
+
+              #inner-box1 img {
+                     width: 100%;
+                     height: 100%;
+                     object-fit: center;
+
+
+              }
+
+              #inner-box2 {
+                     margin-left: 12vw;
+                     margin-top: -22vh;
+                     width: 10vw;
+                     height: 22vh;
+
+                     overflow: hidden;
+
+              }
+
+              #inner-box2 img {
+                     width: 100%;
+                     height: 100%;
+                     object-fit: center;
+              }
+
+              #inner-box3 {
+                     margin-top: 10px;
+                     margin-left: 13px;
+                     width: 10vw;
+                     height: 22vh;
+
+                     overflow: hidden;
+
+              }
+
+              #inner-box3 img {
+                     width: 100%;
+                     height: 100%;
+                     object-fit: center;
+              }
+
+              #inner-box4 {
+                     margin-left: 12vw;
+                     margin-top: -22vh;
+                     width: 10vw;
+                     height: 22vh;
+
+                     margin-bottom: 20px;
+                     overflow: hidden;
+
+              }
+
+              #inner-box4 img {
+                     width: 100%;
+                     height: 100%;
+                     object-fit: center;
+              }
+
+              #box-101 a {
+                     font-size: 14px;
+                     margin-left: 10px;
+                     text-decoration: none;
+              }
+
+
+
+
+              #box-102 h2 {
+                     padding-top: 15px;
+                     margin-left: 7px;
+              }
+
+              #inner-box11 {
+                     margin-top: 10px;
+                     margin-left: 13px;
+                     width: 10vw;
+                     height: 22vh;
+
+                     overflow: hidden;
+
+              }
+
+              #inner-box11 img {
+                     width: 100%;
+                     height: 100%;
+                     object-fit: center;
+
+
+              }
+
+              #inner-box21 {
+                     margin-left: 12vw;
+                     margin-top: -22vh;
+                     width: 10vw;
+                     height: 22vh;
+                     overflow: hidden;
+
+
+              }
+
+              #inner-box21 img {
+                     width: 100%;
+                     height: 100%;
+                     object-fit: center;
+
+
+              }
+
+              #inner-box31 {
+                     margin-top: 10px;
+                     margin-left: 13px;
+                     width: 10vw;
+                     height: 22vh;
+                     overflow: hidden;
+
+
+              }
+
+              #inner-box31 img {
+                     width: 100%;
+                     height: 100%;
+                     object-fit: center;
+
+
+              }
+
+              #inner-box41 {
+                     margin-left: 12vw;
+                     margin-top: -22vh;
+                     width: 10vw;
+                     height: 22vh;
+                     overflow: hidden;
+                     margin-bottom: 3px;
+
+              }
+
+              #inner-box41 img {
+                     width: 100%;
+                     height: 100%;
+                     object-fit: center;
+
+
+              }
+
+              #box-102 a {
+                     font-size: 14px;
+                     margin-left: 10px;
+                     text-decoration: none;
+              }
+
+
+
+              #box-103 h2 {
+                     padding-top: 15px;
+                     margin-left: 7px;
+              }
+
+              #inner-box12 {
+                     margin-top: 10px;
+                     margin-left: 13px;
+                     width: 10vw;
+                     height: 22vh;
+                     overflow: hidden;
+
+
+              }
+
+              #inner-box12 img {
+                     width: 100%;
+                     height: 100%;
+                     object-fit: center;
+              }
+
+              #inner-box22 {
+                     margin-left: 12vw;
+                     margin-top: -22vh;
+                     width: 10vw;
+                     height: 22vh;
+                     overflow: hidden;
+
+              }
+
+              #inner-box22 img {
+                     width: 100%;
+                     height: 100%;
+                     object-fit: center;
+              }
+
+              #inner-box32 {
+                     margin-top: 10px;
+                     margin-left: 13px;
+                     width: 10vw;
+                     height: 22vh;
+                     overflow: hidden;
+              }
+
+              #inner-box32 img {
+                     width: 100%;
+                     height: 100%;
+                     object-fit: center;
+              }
+
+              #inner-box42 {
+                     margin-left: 12vw;
+                     margin-top: -22vh;
+                     width: 10vw;
+                     height: 22vh;
+                     overflow: hidden;
+                     margin-bottom: 20px;
+
+              }
+
+              #inner-box42 img {
+                     width: 100%;
+                     height: 100%;
+                     object-fit: center;
+              }
+
+              #box-103 a {
+                     font-size: 14px;
+                     margin-left: 10px;
+                     text-decoration: none;
+              }
+
+
+
+              #box-104 h2 {
+                     padding-top: 15px;
+                     margin-left: 7px;
+              }
+
+              #inner-box13 {
+                     margin-top: 10px;
+                     margin-left: 13px;
+                     width: 10vw;
+                     height: 22vh;
+                     overflow: hidden;
+
+              }
+
+              #inner-box13 img {
+                     height: 100%;
+                     width: 100%;
+                     object-fit: center;
+              }
+
+              #inner-box23 {
+                     margin-left: 12vw;
+                     margin-top: -22vh;
+                     width: 10vw;
+                     height: 22vh;
+                     overflow: hidden;
+              }
+
+              #inner-box23 img {
+                     height: 100%;
+                     width: 100%;
+                     object-fit: center;
+              }
+
+              #inner-box33 {
+                     margin-top: 10px;
+                     margin-left: 13px;
+                     width: 10vw;
+                     height: 22vh;
+                     overflow: hidden;
+              }
+
+              #inner-box33 img {
+                     height: 100%;
+                     width: 100%;
+                     object-fit: center;
+              }
+
+              #inner-box43 {
+                     margin-left: 12vw;
+                     margin-top: -22vh;
+                     width: 10vw;
+                     height: 22vh;
+                     overflow: hidden;
+                     margin-bottom: 3px;
+
+              }
+
+              #inner-box43 img {
+                     height: 100%;
+                     width: 100%;
+                     object-fit: center;
+                     object-position: center;
+              }
+
+              #box-104 a {
+                     font-size: 14px;
+                     margin-left: 10px;
+                     text-decoration: none;
+              }
+
+            
+.footer_1{
+    width: 18rem;
+    height: 24rem;
+    
+    overflow: hidden;
+}
+.footer_2{
+    width: 18rem;
+    height: 24rem;
+    
+    overflow: hidden;
+}
+.footer_3{
+    width: 18rem;
+    height: 24rem;
+    
+    overflow: hidden;
+}
+.footer_4{
+    width: 18rem;
+    height: 24rem;
+    
+    overflow: hidden;
+}
+
+.footer_1  h2{
+    text-align: start;
+    margin-bottom: 8px;
+    opacity: 0.6;
+    font-weight: 400;
+}
+.footer_1  h1{
+    text-align: start;
+    margin-bottom: 8px;
+}
+.footer_2  h1{
+    text-align: start;
+    margin-bottom: 8px;
+}
+.footer_3  h1{
+    text-align: start;
+    margin-bottom: 8px;
+}
+.footer_4  h1{
+    text-align: start;
+    margin-bottom: 8px;
+}
+.footer_4 #inp {
+    text-align: start;
+    margin-bottom: 8px;
+    margin-right: 7vw;
+    padding: 0.5vw;
+    border-radius: 10px;
+    font-weight: 700;
+    border: none;
+}
+.footer_2  h2{
+    text-align: start;
+    margin-bottom: 8px;
+    opacity: 0.6;
+    font-weight: 400;
+}
+
+.footer_3  h2{
+    text-align: start;
+    margin-bottom: 8px;
+    opacity: 0.6;
+    font-weight: 400;
+}
+.footer_4  h2{
+    text-align: start;
+    margin-bottom: 8px;
+    opacity: 0.6;
+    font-weight: 400;
+}
+
+
+              
+       </style>
+</head>
+
+<body>
+
+       <header>
+              <div id="main">
+                     <div class="navbar">
+                            <div class="nav-logo ">
+
+                                   <div class="logo">
+                                          <img class="border" src="/images/Amazon-India-Logo-PNG-White.png" alt="">
+                                   </div>
+                            </div>
+
+                            <div class="nav-address border ">
+                                   <p>
+                                   <div class="add-first">Hello</div>
+                                   </p>
+                                   <div class="add-icon">
+                                          <i class="ri-map-pin-line"></i>
+                                          <p>
+                                          <div class="add-second">Select your address</div>
+                                          </p>
+                                   </div>
+                            </div>
+
+                            <div class="nav-search">
+                                   <select name="" id="search-select">
+                                          <option value=""> Fashion</option>
+                                   </select>
+                                   <input type="text" placeholder="Search .in" class="search-input">
+                                   <div class="search-icon">
+                                          <i class="ri-search-2-line"></i>
+
+                                   </div>
+                            </div>
+                            <div class="flag-box border">
+                                   <img src="https://cdn.britannica.com/97/1597-004-05816F4E/Flag-India.jpg" alt="">
+                                   <h3>EN</h3>
+                                   <select name="" id="select-lang">
+                                          <option value="">EN</option>
+                                   </select>
+                            </div>
+                            <div class="nav-signin border">
+                                   <p><span>Hello, sign in</span></p>
+                                   <p>
+                                   <div class="nav-second"> Accounts & Lists <select name=""
+                                                 id="select-signin"></select></div>
+                                   </p>
+                            </div>
+                            <div class="return-poli border">
+                                   <p><span>Returns</span></p>
+                                   <p class="nav-second">& Orders</p>
+                            </div>
+                            <div class="cart-box border">
+                                   <i class="ri-shopping-cart-2-line"></i>
+                                   <p id="text-cart">cart</p>
+                            </div>
+                     </div>
+
+
+                     <div class="panel">
+                            <div class="panel-all">
+                                   <i class="ri-menu-line">All</i>
+
+                                   <p class="second-box"> miniTV</p>
+                                   <p class="second-box">Sell</p>
+                                   <p class="second-box">Best Seller</p>
+                                   <p class="second-box">Today's Deals</p>
+                                   <p class="second-box">Mobiles</p>
+                                   <p class="second-box">New Releases</p>
+                                   <p class="second-box">Customer Service</p>
+                                   <p class="second-box">Prime <i class="ri-arrow-down-s-fill"></i></p>
+                                   <p class="second-box">Electronics</p>
+                                   <p class="second-box">Home & Kitchen</p>
+                                   <p class="second-box">Fashion</p>
+                                   <p class="second-box">Computers</p>
+                                   <p class="second-box">Gift ideas</p>
+                                   <p class="second-box"> Pay</p>
+                                   <p class="second-box">Coupons</p>
+                            </div>
+
+                     </div>
+                     <!-- 
+            <div id="page3"></div>
+            <div id="page4"></div> -->
+
+
+
+
+                     <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                   <div class="swiper-slide"><img
+                                                 src="https://images-eu.ssl-images-amazon.com/images/G/31/2023/GateWay/September/Unrec/TE_PC._CB577849301_.jpg"
+                                                 alt=""></div>
+                                   <div class="swiper-slide"><img
+                                                 src="https://m.media-amazon.com/images/I/61lwJy4B8PL._SX3000_.jpg"
+                                                 alt=""></div>
+                                   <div class="swiper-slide"><img
+                                                 src="https://m.media-amazon.com/images/I/71Ie3JXGfVL._SX3000_.jpg"
+                                                 alt=""></div>
+                                   <div class="swiper-slide"><img
+                                                 src="https://images-eu.ssl-images-amazon.com/images/G/31/OHL/23/Central/BAU/Unrec/21to25/PC_hero_1_2x._CB598561652_.jpg"
+                                                 alt=""></div>
+                                   <div class="swiper-slide"><img
+                                                 src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/PCA/GW/Unrec/PCA_GW_PC-2X._CB577919462_.jpg"
+                                                 alt=""></div>
+                                   <div class="swiper-slide"><img
+                                                 src="https://m.media-amazon.com/images/I/61zAjw4bqPL._SX3000_.jpg"
+                                                 alt=""></div>
+                                   <div class="swiper-slide"><img
+                                                 src="https://m.media-amazon.com/images/I/51Id5Jjpm-L._SX1500_.jpg"
+                                                 alt=""></div>
+                                   <div class="swiper-slide"><img
+                                                 src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Watches2023/Sept/GW/MFD/Unrec/499/unrec_3000._CB577827161_.jpg"
+                                                 alt=""></div>
+                                   <div class="swiper-slide"><img
+                                                 src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Toys/GW/GW-Hero-PC_BBAug23_Soft-toys_with-Apay_Lifestyle_2x._CB597740150_.jpg"
+                                                 alt=""></div>
+                                   <div class="swiper-slide"><img
+                                                 src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/Fashion/GW/MFD/Sep/9._CB577858115_.jpg"
+                                                 alt=""></div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <!-- <div class="swiper-pagination"></div> -->
+                     </div>
+
+                     <!-- start box position div from here -->
+
+                     <div id="box-101">
+                            <h2>Up to 75% off | Headphones</h2>
+                            <div id="inner-box1"><img
+                                          src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/MSO/CE/Unrec1/Boat_Desktop_Qc_1x._SY116_CB577919562_.jpg"
+                                          alt=""></div>
+                            <div id="inner-box2"><img
+                                          src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/MSO/CE/Unrec1/Boult_Desktop_Qc_1x._SY116_CB577919562_.jpg"
+                                          alt=""></div>
+                            <div id="inner-box3"><img
+                                          src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/MSO/CE/Unrec1/Noise_Desktop_Qc_1x._SY116_CB577919562_.jpg"
+                                          alt=""></div>
+                            <div id="inner-box4"><img
+                                          src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/MSO/CE/Unrec1/Zebronics_Desktop_Qc_1x._SY116_CB577919562_.jpg"
+                                          alt=""></div>
+                            <!-- <a  href="#">See all offers</a> -->
+                            <h1 style="margin-left: 15px">₹500</h1>
+
+
+                     </div>
+                     <div id="box-102">
+                            <h2>Computer Accessories | Under ₹499</h2>
+                            <div id="inner-box11"><img
+                                          src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/CEPC/PC-Acc/GW/Sep/01_SET1_pc_186x116._SY116_CB577849250_.jpg"
+                                          alt=""></div>
+                            <div id="inner-box21"><img
+                                          src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/CEPC/PC-Acc/GW/Sep/02_SET1_pc_186x116._SY116_CB577849250_.jpg"
+                                          alt=""></div>
+                            <div id="inner-box31"><img
+                                          src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/CEPC/PC-Acc/GW/Sep/03_SET1_pc_186x116._SY116_CB577849250_.jpg"
+                                          alt=""></div>
+                            <div id="inner-box41"><img
+                                          src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/CEPC/PC-Acc/GW/Sep/04_SET1_pc_186x116._SY116_CB577849250_.jpg"
+                                          alt=""></div>
+                            <h1 style="margin-left: 15px">₹499</h1>
+                     </div>
+                     <div id="box-103">
+                            <h2>Revamp your home in style</h2>
+                            <div id="inner-box12"><img
+                                          src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2023/BAU2023/BTFGW/Home_Decor_-_Low_Res_-_PCQC._SY116_CB596096789_.jpg"
+                                          alt=""></div>
+                            <div id="inner-box22"><img
+                                          src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2023/BAU2023/BTFGW/HF_-_Low_Res_-_PCQC._SY116_CB596096789_.jpg"
+                                          alt=""></div>
+                            <div id="inner-box32"><img
+                                          src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2023/BAU2023/BTFGW/Home_Storage_-_Low_Res_-_PCQC._SY116_CB596096789_.jpg"
+                                          alt=""></div>
+                            <div id="inner-box42"><img
+                                          src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2023/BAU2023/BTFGW/Indoor_Lighting_-_Low_Res_-_PCQC._SY116_CB596096789_.jpg"
+                                          alt=""></div>
+                            <h1 style="margin-left: 15px">₹700</h1>
+
+                     </div>
+                     <div id="box-104">
+                            <h2>Up to 70% off | Styles for men</h2>
+                            <div id="inner-box13"><img
+                                          src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF-1-186-116._SY116_CB636110853_.jpg"
+                                          alt=""></div>
+                            <div id="inner-box23"><img
+                                          src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF-2-186-116._SY116_CB636110853_.jpg"
+                                          alt=""></div>
+                            <div id="inner-box33"><img
+                                          src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF-3-186-116._SY116_CB636110853_.jpg"
+                                          alt=""></div>
+                            <div id="inner-box43"><img
+                                          src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF-4-186-116._SY116_CB636110853_.jpg"
+                                          alt=""></div>
+                            <h1 style="margin-left: 15px">₹1500</h1>
+
+                     </div>
+
+                     <!-- <div id="page3"></div> -->
+
+              </div>
+
+              <div  style=" width: 100vw;height: 100vh;background-color: #f4d0a1; padding: 20px; overflow-x: hidden;">
+                     <div style="display: flex;align-items: center; justify-content: space-around; overflow: hidden; padding-bottom: 30px;">
+                            <div style="width: 23vw; height: 45vh; background-color: rgb(158, 156, 156);">
+                                   <div style="display: flex;align-items: center;justify-content: space-around; gap: 1vw;padding:0.6vw;">
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;  ">
+                                               <img style="width: 100%; height: 100%; object-fit: cover; " src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PC_WF/WF1-186-116._SY116_CB636048992_.jpg" alt="">
+                                          </div>
+
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;">
+                                                  <img style="width: 100%; height: 100%; object-fit: cover;" src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PC_WF/WF2-186-116._SY116_CB636048992_.jpg" alt="">
+                                          </div>
+                                   </div>
+                                   <div style="display: flex;align-items: center;justify-content: space-around;gap: 1vw; padding:0.6vw;">
+
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;">
+                                                 <img style="width: 100%; height: 100%; object-fit: cover;" src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PC_WF/WF4-186-116._SY116_CB636048992_.jpg" alt="">
+
+                                          </div>
+
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;">
+                                                 <img style="width: 100%; height: 100%; object-fit: cover;" src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PC_WF/WF3-186-116._SY116_CB636048992_.jpg" alt="">
+
+                                          </div>
+                                   </div>
+                                   <div style="display: flex; align-items: center; justify-content: space-between; padding: 0px 1vw;">
+                                          <h2>₹3000</h2>
+                                        <button id="rzp-button1" style="padding: 5px 8px; border-radius: 5px;border: none;">Buy now</button> 
+                                   </div>
+
+                            
+                     </div>
+                            <div style="width: 23vw; height: 45vh; background-color:rgb(158, 156, 156);">
+                                   <div style="display: flex;align-items: center;justify-content: space-around; gap: 1vw;padding:0.6vw;">
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;  ">
+                                               <img style="width: 100%; height: 100%; object-fit: cover; " src="https://images-eu.ssl-images-amazon.com/images/G/31/img17/Auto/2020/GW/PCQC/Glasscare1X._SY116_CB410830553_.jpg" alt="">
+                                          </div>
+
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;">
+                                                  <img style="width: 100%; height: 100%; object-fit: cover;" src="https://images-eu.ssl-images-amazon.com/images/G/31/img17/Auto/2020/GW/PCQC/Rim_tyrecare1x._SY116_CB410830552_.jpg" alt="">
+                                          </div>
+                                   </div>
+                                   <div style="display: flex;align-items: center;justify-content: space-around;gap: 1vw; padding:0.6vw;">
+
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;">
+                                                 <img style="width: 100%; height: 100%; object-fit: cover;" src="https://images-eu.ssl-images-amazon.com/images/G/31/img17/Auto/2020/GW/PCQC/Vega_helmet_186x116._SY116_CB405090404_.jpg" alt="">
+
+                                          </div>
+
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;">
+                                                 <img style="width: 100%; height: 100%; object-fit: cover;" src="https://images-eu.ssl-images-amazon.com/images/G/31/img17/Auto/2020/GW/PCQC/Vaccum1x._SY116_CB410830552_.jpg" alt="">
+
+                                          </div>
+                                   </div>
+                                   <div style="display: flex; align-items: center; justify-content: space-between; padding: 0px 1vw;">
+                                          <h2>₹3000</h2>
+                                         <button id="rzp-button1" style="padding: 5px 8px; border-radius: 5px;border: none;">Buy now</button> 
+                                   </div>
+
+                            
+                     </div>
+                            <div style="width: 23vw; height: 45vh; background-color: rgb(158, 156, 156);">
+                                   <div style="display: flex;align-items: center;justify-content: space-around; gap: 1vw;padding:0.6vw;">
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;  ">
+                                               <img style="width: 100%; height: 100%; object-fit: cover; " src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2024/Gateway/BTFGW/PCQC/186x116_Home_furnishings_2._SY116_CB584596691_.jpg" alt="">
+                                          </div>
+
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;">
+                                                  <img style="width: 100%; height: 100%; object-fit: cover;" src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2024/Gateway/BTFGW/PCQC/186x116_Home_decor_1._SY116_CB584596691_.jpg" alt="">
+                                          </div>
+                                   </div>
+                                   <div style="display: flex;align-items: center;justify-content: space-around;gap: 1vw; padding:0.6vw;">
+
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;">
+                                                 <img style="width: 100%; height: 100%; object-fit: cover;" src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2024/Gateway/BTFGW/PCQC/186x116_Home_storage_1._SY116_CB584596691_.jpg" alt="">
+
+                                          </div>
+
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;">
+                                                 <img style="width: 100%; height: 100%; object-fit: cover;" src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2024/Gateway/BTFGW/PCQC/186x116_Home_lighting_2._SY116_CB584596691_.jpg" alt="">
+
+                                          </div>
+                                   </div>
+                                   <div style="display: flex; align-items: center; justify-content: space-between; padding: 0px 1vw;">
+                                          <h2>₹3000</h2>
+                                        <button id="rzp-button1" style="padding: 5px 8px; border-radius: 5px;border: none;">Buy now</button> 
+                                   </div>
+
+                            
+                     </div>
+                            <div style="width: 23vw; height: 45vh; background-color: rgb(158, 156, 156);">
+                                   <div style="display: flex;align-items: center;justify-content: space-around; gap: 1vw;padding:0.6vw;">
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;  ">
+                                               <img style="width: 100%; height: 100%; object-fit: cover; " src="https://images-eu.ssl-images-amazon.com/images/G/31/img17/Biss/2018/QC/Tools1x._SY116_CB424026090_.jpg" alt="">
+                                          </div>
+
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;">
+                                                  <img style="width: 100%; height: 100%; object-fit: cover;" src="https://images-eu.ssl-images-amazon.com/images/G/31/img17/Biss/2021/BAU_GW_Graphics/PCQC/2._SY116_CB643952439_.jpg" alt="">
+                                          </div>
+                                   </div>
+                                   <div style="display: flex;align-items: center;justify-content: space-around;gap: 1vw; padding:0.6vw;">
+
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;">
+                                                 <img style="width: 100%; height: 100%; object-fit: cover;" src="https://images-eu.ssl-images-amazon.com/images/G/31/img17/Biss/2021/BAU_GW_Graphics/PCQC/1._SY116_CB643952439_.jpg" alt="">
+
+                                          </div>
+
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;">
+                                                 <img style="width: 100%; height: 100%; object-fit: cover;" src="https://images-eu.ssl-images-amazon.com/images/G/31/img17/Biss/2021/BAU_GW_Graphics/PCQC/1._SY116_CB643952439_.jpg" alt="">
+
+                                          </div>
+                                   </div>
+                                   <div style="display: flex; align-items: center; justify-content: space-between; padding: 0px 1vw;">
+                                          <h2>₹3000</h2>
+                                         <button id="rzp-button1" style="padding: 5px 8px; border-radius: 5px;border: none;">Buy now</button>  
+                                   </div>
+
+                            
+                     </div>
+                      
+
+              </div>
+                     <div style="display: flex;align-items: center; justify-content: space-around; overflow: hidden; margin-bottom: 33px;">
+                            <div style="width: 23vw; height: 45vh; background-color: rgb(158, 156, 156);">
+                                   <div style="display: flex;align-items: center;justify-content: space-around; gap: 1vw;padding:0.6vw;">
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;  ">
+                                               <img style="width: 100%; height: 100%; object-fit: cover; " src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF-1-186-116._SY116_CB636110853_.jpg" alt="">
+                                          </div>
+
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;">
+                                                  <img style="width: 100%; height: 100%; object-fit: cover;" src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF-2-186-116._SY116_CB636110853_.jpg" alt="">
+                                          </div>
+                                   </div>
+                                   <div style="display: flex;align-items: center;justify-content: space-around;gap: 1vw; padding:0.6vw;">
+
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;">
+                                                 <img style="width: 100%; height: 100%; object-fit: cover;" src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF-3-186-116._SY116_CB636110853_.jpg" alt="">
+
+                                          </div>
+
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;">
+                                                 <img style="width: 100%; height: 100%; object-fit: cover;" src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF-3-186-116._SY116_CB636110853_.jpg" alt="">
+
+                                          </div>
+                                   </div>
+                                   <div style="display: flex; align-items: center; justify-content: space-between; padding: 0px 1vw;">
+                                          <h2>₹3000</h2>
+                                         <button id="rzp-button1" style="padding: 5px 8px; border-radius: 5px;border: none;">Buy now</button>  
+                                   </div>
+
+                            
+                     </div>
+                            <div style="width: 23vw; height: 45vh; background-color: rgb(158, 156, 156);">
+                                   <div style="display: flex;align-items: center;justify-content: space-around; gap: 1vw;padding:0.6vw;">
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;  ">
+                                               <img style="width: 100%; height: 100%; object-fit: cover; " src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08RDL6H79._SY116_CB667322346_.jpg" alt="">
+                                          </div>
+
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;">
+                                                  <img style="width: 100%; height: 100%; object-fit: cover;" src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08345R1ZW._SY116_CB667322346_.jpg" alt="">
+                                          </div>
+                                   </div>
+                                   <div style="display: flex;align-items: center;justify-content: space-around;gap: 1vw; padding:0.6vw;">
+
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;">
+                                                 <img style="width: 100%; height: 100%; object-fit: cover;" src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08345R1ZW._SY116_CB667322346_.jpg" alt="">
+
+                                          </div>
+
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;">
+                                                 <img style="width: 100%; height: 100%; object-fit: cover;" src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08345R1ZW._SY116_CB667322346_.jpg" alt="">
+
+                                          </div>
+                                   </div>
+                                   <div style="display: flex; align-items: center; justify-content: space-between; padding: 0px 1vw;">
+                                          <h2>₹3000</h2>
+                                         <button id="rzp-button1" style="padding: 5px 8px; border-radius: 5px;border: none;">Buy now</button>  
+                                   </div>
+
+                            
+                     </div>
+                            <div style="width: 23vw; height: 45vh; background-color: rgb(158, 156, 156);">
+                                   <div style="display: flex;align-items: center;justify-content: space-around; gap: 1vw;padding:0.6vw;">
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;  ">
+                                               <img style="width: 100%; height: 100%; object-fit: cover; " src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/HI/SYED/ATF/QC-adapts_186x116_4._SY116_CB600489960_.jpg" alt="">
+                                          </div>
+
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;">
+                                                  <img style="width: 100%; height: 100%; object-fit: cover;" src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/HI/SYED/ATF/QC-adapts_186x116_3._SY116_CB600489960_.jpg" alt="">
+                                          </div>
+                                   </div>
+                                   <div style="display: flex;align-items: center;justify-content: space-around;gap: 1vw; padding:0.6vw;">
+
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;">
+                                                 <img style="width: 100%; height: 100%; object-fit: cover;" src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/HI/SYED/ATF/QC-adapts_186x116_3._SY116_CB600489960_.jpg" alt="">
+
+                                          </div>
+
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;">
+                                                 <img style="width: 100%; height: 100%; object-fit: cover;" src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/HI/SYED/ATF/QC-adapts_186x116_5._SY116_CB600489960_.jpg" alt="">
+
+                                          </div>
+                                   </div>
+                                   <div style="display: flex; align-items: center; justify-content: space-between; padding: 0px 1vw;">
+                                          <h2>₹3000</h2>
+                                         <button id="rzp-button1" style="padding: 5px 8px; border-radius: 5px;border: none;">Buy now</button>  
+                                   </div>
+
+                            
+                     </div>
+                            <div style="width: 23vw; height: 45vh; background-color: rgb(158, 156, 156);">
+                                   <div style="display: flex;align-items: center;justify-content: space-around; gap: 1vw;padding:0.6vw;">
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;  ">
+                                               <img style="width: 100%; height: 100%; object-fit: cover; " src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PC_WF/WF1-186-116._SY116_CB636048992_.jpg" alt="">
+                                          </div>
+
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;">
+                                                  <img style="width: 100%; height: 100%; object-fit: cover;" src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PC_WF/WF2-186-116._SY116_CB636048992_.jpg" alt="">
+                                          </div>
+                                   </div>
+                                   <div style="display: flex;align-items: center;justify-content: space-around;gap: 1vw; padding:0.6vw;">
+
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;">
+                                                 <img style="width: 100%; height: 100%; object-fit: cover;" src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PC_WF/WF2-186-116._SY116_CB636048992_.jpg" alt="">
+
+                                          </div>
+
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;">
+                                                 <img style="width: 100%; height: 100%; object-fit: cover;" src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PC_WF/WF2-186-116._SY116_CB636048992_.jpg" alt="">
+
+                                          </div>
+                                   </div>
+                                   <div style="display: flex; align-items: center; justify-content: space-between; padding: 0px 1vw;">
+                                          <h2>₹3000</h2>
+                                       <button id="rzp-button1" style="padding: 5px 8px; border-radius: 5px;border: none;">Buy now</button> 
+                                   </div>
+
+                            
+                     </div>
+                      
+
+              </div>
+              <div  style=" width: 100vw;height: 100vh;background-color: #f4d0a1; padding: 20px; overflow-x: hidden;">
+                     <div style="display: flex;align-items: center; justify-content: space-around; overflow: hidden; padding-bottom: 30px;">
+                            <div style="width: 23vw; height: 45vh; background-color: rgb(158, 156, 156);">
+                                   <div style="display: flex;align-items: center;justify-content: space-around; gap: 1vw;padding:0.6vw;">
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;  ">
+                                               <img style="width: 100%; height: 100%; object-fit: cover; " src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PC_WF/WF1-186-116._SY116_CB636048992_.jpg" alt="">
+                                          </div>
+
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;">
+                                                  <img style="width: 100%; height: 100%; object-fit: cover;" src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PC_WF/WF2-186-116._SY116_CB636048992_.jpg" alt="">
+                                          </div>
+                                   </div>
+                                   <div style="display: flex;align-items: center;justify-content: space-around;gap: 1vw; padding:0.6vw;">
+
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;">
+                                                 <img style="width: 100%; height: 100%; object-fit: cover;" src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PC_WF/WF4-186-116._SY116_CB636048992_.jpg" alt="">
+
+                                          </div>
+
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;">
+                                                 <img style="width: 100%; height: 100%; object-fit: cover;" src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PC_WF/WF3-186-116._SY116_CB636048992_.jpg" alt="">
+
+                                          </div>
+                                   </div>
+                                   <div style="display: flex; align-items: center; justify-content: space-between; padding: 0px 1vw;">
+                                          <h2>₹3000</h2>
+                                         <button id="rzp-button1" style="padding: 5px 8px; border-radius: 5px;border: none;">Buy now</button>
+                                   </div>
+
+                            
+                     </div>
+                            <div style="width: 23vw; height: 45vh; background-color: rgb(158, 156, 156);">
+                                   <div style="display: flex;align-items: center;justify-content: space-around; gap: 1vw;padding:0.6vw;">
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;  ">
+                                               <img style="width: 100%; height: 100%; object-fit: cover; " src="https://images-eu.ssl-images-amazon.com/images/G/31/img17/Auto/2020/GW/PCQC/Glasscare1X._SY116_CB410830553_.jpg" alt="">
+                                          </div>
+
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;">
+                                                  <img style="width: 100%; height: 100%; object-fit: cover;" src="https://images-eu.ssl-images-amazon.com/images/G/31/img17/Auto/2020/GW/PCQC/Rim_tyrecare1x._SY116_CB410830552_.jpg" alt="">
+                                          </div>
+                                   </div>
+                                   <div style="display: flex;align-items: center;justify-content: space-around;gap: 1vw; padding:0.6vw;">
+
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;">
+                                                 <img style="width: 100%; height: 100%; object-fit: cover;" src="https://images-eu.ssl-images-amazon.com/images/G/31/img17/Auto/2020/GW/PCQC/Vega_helmet_186x116._SY116_CB405090404_.jpg" alt="">
+
+                                          </div>
+
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;">
+                                                 <img style="width: 100%; height: 100%; object-fit: cover;" src="https://images-eu.ssl-images-amazon.com/images/G/31/img17/Auto/2020/GW/PCQC/Vaccum1x._SY116_CB410830552_.jpg" alt="">
+
+                                          </div>
+                                   </div>
+                                   <div style="display: flex; align-items: center; justify-content: space-between; padding: 0px 1vw;">
+                                          <h2>₹3000</h2>
+                                         <button id="rzp-button1" style="padding: 5px 8px; border-radius: 5px;border: none;">Buy now</button> 
+                                   </div>
+
+                            
+                     </div>
+                            <div style="width: 23vw; height: 45vh; background-color: rgb(158, 156, 156);">
+                                   <div style="display: flex;align-items: center;justify-content: space-around; gap: 1vw;padding:0.6vw;">
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;  ">
+                                               <img style="width: 100%; height: 100%; object-fit: cover; " src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2024/Gateway/BTFGW/PCQC/186x116_Home_furnishings_2._SY116_CB584596691_.jpg" alt="">
+                                          </div>
+
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;">
+                                                  <img style="width: 100%; height: 100%; object-fit: cover;" src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2024/Gateway/BTFGW/PCQC/186x116_Home_decor_1._SY116_CB584596691_.jpg" alt="">
+                                          </div>
+                                   </div>
+                                   <div style="display: flex;align-items: center;justify-content: space-around;gap: 1vw; padding:0.6vw;">
+
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;">
+                                                 <img style="width: 100%; height: 100%; object-fit: cover;" src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2024/Gateway/BTFGW/PCQC/186x116_Home_storage_1._SY116_CB584596691_.jpg" alt="">
+
+                                          </div>
+
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;">
+                                                 <img style="width: 100%; height: 100%; object-fit: cover;" src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2024/Gateway/BTFGW/PCQC/186x116_Home_lighting_2._SY116_CB584596691_.jpg" alt="">
+
+                                          </div>
+                                   </div>
+                                   <div style="display: flex; align-items: center; justify-content: space-between; padding: 0px 1vw;">
+                                          <h2>₹3000</h2>
+                                        <button id="rzp-button1" style="padding: 5px 8px; border-radius: 5px;border: none;">Buy now</button> 
+                                   </div>
+
+                            
+                     </div>
+                            <div style="width: 23vw; height: 45vh; background-color: rgb(158, 156, 156);">
+                                   <div style="display: flex;align-items: center;justify-content: space-around; gap: 1vw;padding:0.6vw;">
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;  ">
+                                               <img style="width: 100%; height: 100%; object-fit: cover; " src="https://images-eu.ssl-images-amazon.com/images/G/31/img17/Biss/2018/QC/Tools1x._SY116_CB424026090_.jpg" alt="">
+                                          </div>
+
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;">
+                                                  <img style="width: 100%; height: 100%; object-fit: cover;" src="https://images-eu.ssl-images-amazon.com/images/G/31/img17/Biss/2021/BAU_GW_Graphics/PCQC/2._SY116_CB643952439_.jpg" alt="">
+                                          </div>
+                                   </div>
+                                   <div style="display: flex;align-items: center;justify-content: space-around;gap: 1vw; padding:0.6vw;">
+
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;">
+                                                 <img style="width: 100%; height: 100%; object-fit: cover;" src="https://images-eu.ssl-images-amazon.com/images/G/31/img17/Biss/2021/BAU_GW_Graphics/PCQC/1._SY116_CB643952439_.jpg" alt="">
+
+                                          </div>
+
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;">
+                                                 <img style="width: 100%; height: 100%; object-fit: cover;" src="https://images-eu.ssl-images-amazon.com/images/G/31/img17/Biss/2021/BAU_GW_Graphics/PCQC/1._SY116_CB643952439_.jpg" alt="">
+
+                                          </div>
+                                   </div>
+                                   <div style="display: flex; align-items: center; justify-content: space-between; padding: 0px 1vw;">
+                                          <h2>₹3000</h2>
+                                       <button id="rzp-button1" style="padding: 5px 8px; border-radius: 5px;border: none;">Buy now</button> 
+                                   </div>
+
+                            
+                     </div>
+                      
+
+              </div>
+                     <div style="display: flex;align-items: center; justify-content: space-around; overflow: hidden; margin-bottom: 33px;">
+                            <div style="width: 23vw; height: 45vh; background-color: rgb(158, 156, 156);">
+                                   <div style="display: flex;align-items: center;justify-content: space-around; gap: 1vw;padding:0.6vw;">
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;  ">
+                                               <img style="width: 100%; height: 100%; object-fit: cover; " src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF-1-186-116._SY116_CB636110853_.jpg" alt="">
+                                          </div>
+
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;">
+                                                  <img style="width: 100%; height: 100%; object-fit: cover;" src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF-2-186-116._SY116_CB636110853_.jpg" alt="">
+                                          </div>
+                                   </div>
+                                   <div style="display: flex;align-items: center;justify-content: space-around;gap: 1vw; padding:0.6vw;">
+
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;">
+                                                 <img style="width: 100%; height: 100%; object-fit: cover;" src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF-3-186-116._SY116_CB636110853_.jpg" alt="">
+
+                                          </div>
+
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;">
+                                                 <img style="width: 100%; height: 100%; object-fit: cover;" src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF-3-186-116._SY116_CB636110853_.jpg" alt="">
+
+                                          </div>
+                                   </div>
+                                   <div style="display: flex; align-items: center; justify-content: space-between; padding: 0px 1vw;">
+                                          <h2>₹3000</h2>
+                                       <button id="rzp-button1" style="padding: 5px 8px; border-radius: 5px;border: none;">Buy now</button>  
+                                   </div>
+
+                            
+                     </div>
+                            <div style="width: 23vw; height: 45vh; background-color: rgb(158, 156, 156);">
+                                   <div style="display: flex;align-items: center;justify-content: space-around; gap: 1vw;padding:0.6vw;">
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;  ">
+                                               <img style="width: 100%; height: 100%; object-fit: cover; " src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08RDL6H79._SY116_CB667322346_.jpg" alt="">
+                                          </div>
+
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;">
+                                                  <img style="width: 100%; height: 100%; object-fit: cover;" src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08345R1ZW._SY116_CB667322346_.jpg" alt="">
+                                          </div>
+                                   </div>
+                                   <div style="display: flex;align-items: center;justify-content: space-around;gap: 1vw; padding:0.6vw;">
+
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;">
+                                                 <img style="width: 100%; height: 100%; object-fit: cover;" src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08345R1ZW._SY116_CB667322346_.jpg" alt="">
+
+                                          </div>
+
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;">
+                                                 <img style="width: 100%; height: 100%; object-fit: cover;" src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08345R1ZW._SY116_CB667322346_.jpg" alt="">
+
+                                          </div>
+                                   </div>
+                                   <div style="display: flex; align-items: center; justify-content: space-between; padding: 0px 1vw;">
+                                          <h2>₹3000</h2>
+                                     <button id="rzp-button1" style="padding: 5px 8px; border-radius: 5px;border: none;">Buy now</button>
+                                   </div>
+
+                            
+                     </div>
+                            <div style="width: 23vw; height: 45vh; background-color: rgb(158, 156, 156);">
+                                   <div style="display: flex;align-items: center;justify-content: space-around; gap: 1vw;padding:0.6vw;">
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;  ">
+                                               <img style="width: 100%; height: 100%; object-fit: cover; " src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/HI/SYED/ATF/QC-adapts_186x116_4._SY116_CB600489960_.jpg" alt="">
+                                          </div>
+
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;">
+                                                  <img style="width: 100%; height: 100%; object-fit: cover;" src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/HI/SYED/ATF/QC-adapts_186x116_3._SY116_CB600489960_.jpg" alt="">
+                                          </div>
+                                   </div>
+                                   <div style="display: flex;align-items: center;justify-content: space-around;gap: 1vw; padding:0.6vw;">
+
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;">
+                                                 <img style="width: 100%; height: 100%; object-fit: cover;" src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/HI/SYED/ATF/QC-adapts_186x116_3._SY116_CB600489960_.jpg" alt="">
+
+                                          </div>
+
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;">
+                                                 <img style="width: 100%; height: 100%; object-fit: cover;" src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/HI/SYED/ATF/QC-adapts_186x116_5._SY116_CB600489960_.jpg" alt="">
+
+                                          </div>
+                                   </div>
+                                   <div style="display: flex; align-items: center; justify-content: space-between; padding: 0px 1vw;">
+                                          <h2>₹3000</h2>
+                                      <button id="rzp-button1" style="padding: 5px 8px; border-radius: 5px;border: none;">Buy now</button> 
+                                   </div>
+
+                            
+                     </div>
+                            <div style="width: 23vw; height: 45vh; background-color: rgb(158, 156, 156);">
+                                   <div style="display: flex;align-items: center;justify-content: space-around; gap: 1vw;padding:0.6vw;">
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;  ">
+                                               <img style="width: 100%; height: 100%; object-fit: cover; " src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PC_WF/WF1-186-116._SY116_CB636048992_.jpg" alt="">
+                                          </div>
+
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;">
+                                                  <img style="width: 100%; height: 100%; object-fit: cover;" src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PC_WF/WF2-186-116._SY116_CB636048992_.jpg" alt="">
+                                          </div>
+                                   </div>
+                                   <div style="display: flex;align-items: center;justify-content: space-around;gap: 1vw; padding:0.6vw;">
+
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;">
+                                                 <img style="width: 100%; height: 100%; object-fit: cover;" src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PC_WF/WF2-186-116._SY116_CB636048992_.jpg" alt="">
+
+                                          </div>
+
+                                          <div style="height: 18vh; width: 12vw; background-color: #0F1111;">
+                                                 <img style="width: 100%; height: 100%; object-fit: cover;" src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PC_WF/WF2-186-116._SY116_CB636048992_.jpg" alt="">
+
+                                          </div>
+                                   </div>
+                                   <div style="display: flex; align-items: center; justify-content: space-between; padding: 0px 1vw;">
+                                          <h2>₹3000</h2>
+                                      <button  id="rzp-button1" style="padding: 5px 8px; border-radius: 5px;border: none;">Buy now</button> 
+                                   </div>
+
+                            
+                     </div>
+                      
+
+              </div>
+              
+
+
+              <div style="height: 70vh; width: 100vw; background-color: #313d4c;">
+                     <div style="display: flex; align-items: center; justify-content: space-around; padding:0px 5vw\;">
+
+                            <div style="height: 55vh; width: 17vw;   padding: 20px;">
+                                   <h1>Get to Know Us </h1>
+                                   <h2>About Us</h2>
+                                   <h2>Careers</h2>
+                                   <h2>Press Releases</h2>
+                                   <h2>Amazon Science</h2>
+                            </div>
+                            <div style="height: 55vh; width: 17vw; padding: 20px;">
+                                   <h1>Connect with Us</h1> 
+                                   <h2>Connect with Us</h2>
+                                   <h2> Twitter</h2>
+                                   <h2> Instagram</h2>
+                            </div>
+                            <div style="height: 55vh; width: 17vw;padding: 20px;">
+                                   <h1> Make Money with Us</h1>
+                                   <h2>Sell on Amazon</h2>
+                                   <h2>Sell under Amazon Accelerator</h2>
+                                   <h2>Protect and Build Your Brand</h2>
+                                   <h2>Amazon Global Selling</h2>
+                                   <h2>Become an Affiliate</h2>
+                                   <h2>Fulfilment by Amazon</h2>
+                                   <h2>Advertise Your Products</h2>
+                                   <h2>Amazon Pay on Merchants</h2>
+                                   
+                            </div>  
+                            <div style="height: 55vh; width: 17vw;padding: 20px;">
+                                   <h1> Let Us Help You</h1>
+                                   <h2>COVID-19 and Amazon</h2>
+                                   <h2>Your Account</h2>
+                                   <h2>Returns Centre</h2>
+                                   <h2>100% Purchase Protection</h2>
+                                   <h2>Amazon App Download</h2>
+                                   <h2>Help</h2>
+                                   
+                                   
+                            </div>  
+
+
+                     </div>
+
+              </div>
+              
+       </header>
+
+
+
+       <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+       <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+              integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+              crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+              integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+              crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+              <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+       <script>
+
+
+              // function loco(){
+              //   gsap.registerPlugin(ScrollTrigger);
+
+              // // Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
+
+              // const locoScroll = new LocomotiveScroll({
+              //   el: document.querySelector("#main"),
+              //   smooth: true
+              // });
+              // // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
+              // locoScroll.on("scroll", ScrollTrigger.update);
+
+              // // tell ScrollTrigger to use these proxy methods for the "#main" element since Locomotive Scroll is hijacking things
+              // ScrollTrigger.scrollerProxy("#main", {
+              //   scrollTop(value) {
+              //     return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
+              //   }, // we don't have to define a scrollLeft because we're only scrolling vertically.
+              //   getBoundingClientRect() {
+              //     return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
+              //   },
+              //   // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
+              //   pinType: document.querySelector("#main").style.transform ? "transform" : "fixed"
+              // });
+
+
+
+
+              // // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
+              // ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+
+              // // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
+              // ScrollTrigger.refresh();
+
+              // }
+
+              // loco()
+
+              var swiper = new Swiper(".mySwiper", {
+                     spaceBetween: 30,
+                     centeredSlides: true,
+
+                     autoplay: {
+                            delay: 2500,
+                            disableOnInteraction: false,
+                     },
+                     pagination: {
+                            el: ".swiper-pagination",
+                            clickable: true,
+                     },
+                     navigation: {
+                            nextEl: ".swiper-button-next",
+                            prevEl: ".swiper-button-prev",
+
+                     },
+              });
+       
+              var orderId;
+    $(document).ready(function () {
+      var settings = {
+        "url": "/create/orderId",
+        "method": "POST",
+        "timeout": 0,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "data": JSON.stringify({
+          "amount": "50000"
+
+        }),
+      };
+
+      //creates new orderId everytime
+      $.ajax(settings).done(function (response) {
+
+        var options = {
+          "key": "rzp_test_RG8SmW8Vs3CEfQ", // Enter the Key ID generated from the Dashboard
+          "amount": response.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+          "currency": response.currency,
+          "name": "AbhiWorld",
+          "description": "its helps human understand",
+          "image": "https://i.pinimg.com/564x/16/45/93/164593f47e3b9f9b9459e77468d5e1bc.jpg",
+          "order_id": response.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+          "handler": function (response) {
+            var settings1 = {
+              "url": "/api/payment/verify",
+              "method": "POST",
+              "timeout": 0,
+              "headers": {
+                "Content-Type": "application/json"
+              },
+              "data": JSON.stringify({response}),
+            }
+            $.ajax(settings1).done(function(response){
+              if(response==true){
+                alert("payment successful");
+
+              }else{
+                alert("Payment failed");
+              }
+            })
+          },
+          
+          "notes": {
+            "address": "Razorpay Corporate Office"
+          },
+          "theme": {
+            "color": "#3399cc"
+          }
+        };
+        var rzp1 = new Razorpay(options);
+        rzp1.on('payment.failed', function (response) {
+          alert(response.error.code);
+          alert(response.error.description);
+          alert(response.error.source);
+          alert(response.error.step);
+          alert(response.error.reason);
+          alert(response.error.metadata.order_id);
+          alert(response.error.metadata.payment_id);
+        });
+        document.getElementById('rzp-button1').onclick = function (e) {
+          rzp1.open();
+          e.preventDefault();
+        }
+      });
+    });
+       </script>
+</body>
+
+</html>
